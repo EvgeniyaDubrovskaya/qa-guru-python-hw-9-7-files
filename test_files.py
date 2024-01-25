@@ -11,6 +11,10 @@ def test_check_file_context():
     # Pack files
     tmp_dir = os.path.join(CUR_DIR, "tmp")
     res_dir = os.path.join(CUR_DIR, "resources")
+
+    if not os.path.isdir(res_dir):
+        os.mkdir(res_dir)
+
     with ZipFile(res_dir + "\\files.zip", mode="w") as archive:
         for file in os.listdir(tmp_dir):
             archive.write(os.path.join(tmp_dir, file), str.lower(file.title()))
