@@ -1,7 +1,7 @@
 import os
 from io import BytesIO, TextIOWrapper
 from zipfile import ZipFile
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 import csv
 from openpyxl import load_workbook
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
